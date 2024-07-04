@@ -8,18 +8,6 @@ Folder tf1 contains the original Tensorflow 1 codes (works with Tensorflow versi
 
 Folder tf2 contains some examples which are converted to run on Tensorflow 2 (tested with version 2.11).
 
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-
-# DeepEnergyMethods
-
-Repository for Deep Learning Methods for solving Partial Differential Equations
-
-Companion paper: https://arxiv.org/abs/1908.10407 or https://doi.org/10.1016/j.cma.2019.112790
-
-Folder tf1 contains the original Tensorflow 1 codes (works with Tensorflow versions up to 1.15).
-
-Folder tf2 contains some examples which are converted to run on Tensorflow 2 (tested with version 2.11).
-
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 # README tf2:
@@ -75,7 +63,7 @@ s
 
 ### Helmholtz2D_Acoustic_Duct.py
 
-This module implements a Helmholtz 2D problem for an acoustic duct. It solves for both the real and imaginary parts with Neumann and Robin boundary conditions.
+Need to fill this
 
 ### [Interpolate.py](http://interpolate.py/)
 
