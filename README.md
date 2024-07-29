@@ -227,41 +227,25 @@ and
 A
 2
 ​
-for the exact solution.< br / >
+for the exact solution.
 
 Exact Solution Functions: Defines the exact solution and its derivatives for comparison with the predicted solution.
 
-Boundary Conditions: Defines the boundary conditions for the problem.< br / >
+Boundary Conditions: Defines the boundary conditions for the problem.
 
-Generate Training Data: Creates the interior points and boundary points for training the model.< br / >
+Generate Training Data: Creates the interior points and boundary points for training the model.
 
-Model Definition: Defines a neural network model using TensorFlow's Keras API with dense layers.< br / >
+Model Definition: Defines a neural network model using TensorFlow's Keras API with dense layers.
 
-Training: Trains the model using the Adam optimizer and then fine-tunes it using the L-BFGS optimizer.< br / >
+Training: Trains the model using the Adam optimizer and then fine-tunes it using the L-BFGS optimizer.
 
-Testing: Tests the trained model and compares it with the exact solution.< br / >
+Testing: Tests the trained model and compares it with the exact solution.
 
 Visualization: Plots the real and imaginary parts of the exact and computed solutions, as well as the error between them. Also plots the convergence of the loss function.
 
-Graphs Generated< br / >
-The following graphs are generated during the execution:< br / >
-
-Exact Solution (Real Part):< br / >
-
-Computed Solution (Real Part):< br / >
-
-Error (Real Part):< br / >
-
-Exact Solution (Imaginary Part):< br / >
-
-Computed Solution (Imaginary Part):< br / >
-
-Error (Imaginary Part):
-
-Loss Convergence:< br / >
-
 Results
-L2-error norm (Real Part): The L2 error norm for the real part of the solution.< br / >
+L2-error norm (Real Part): The L2 error norm for the real part of the solution.
+
 L2-error norm (Imaginary Part): The L2 error norm for the imaginary part of the solution.
 
 #### Overview
