@@ -252,7 +252,69 @@ The code is structured as follows:
 
 ### [Interpolate.py](http://interpolate.py/)
 
-This script demonstrates an interpolation example. It interpolates the function given by `exact_sol(x)` at a discrete set of points.
+## Interpolation Example
+
+### Description
+
+This module demonstrates how to interpolate a function using a neural network. The code uses Physics-Informed Neural Networks (PINNs) for this purpose. The structure of the code is as follows:
+
+1. **Define the Function to be Interpolated**:
+
+   - Defines the function \( \text{exact_sol}(x) = \sin(k \pi x) \) where \( k = 4 \).
+
+2. **Generate Training Data**:
+
+   - Generates a set of input points \( X \) and their corresponding function values \( Y \) for training.
+
+3. **Model Definition**:
+
+   - Defines a neural network model using TensorFlow's Keras API with dense layers.
+
+4. **Training**:
+
+   - Trains the model using the Adam optimizer and then fine-tunes it using the L-BFGS optimizer.
+
+5. **Testing**:
+
+   - Tests the trained model and compares it with the exact function values.
+
+6. **Visualization**:
+   - Plots the interpolated function against the exact function.
+   - Plots the error between the interpolated and exact values.
+   - Plots the convergence of the loss function.
+
+### Instructions
+
+1. **Function to be Interpolated**:
+
+   - `exact_sol`: Defines the function \( \sin(k \pi x) \) to be interpolated.
+
+2. **Generate Training Data**:
+
+   - Generates 201 points between -1 and 1 for training.
+
+3. **Model Definition**:
+
+   - Defines a neural network with 3 dense layers using the "tanh" activation function.
+
+4. **Training**:
+
+   - Trains the model using the Adam optimizer for 10,000 epochs.
+   - Fine-tunes the model using the L-BFGS optimizer.
+
+5. **Testing**:
+
+   - Tests the trained model on 402 points.
+   - Compares the model output with the exact function values.
+
+6. **Visualization**:
+   - Plots the interpolated function vs. the exact function.
+   - Plots the error between the interpolated and exact values.
+   - Displays the convergence of the loss function.
+
+### Usage
+
+This module utilizes Physics-Informed Neural Networks (PINNs) to interpolate the given function. PINNs are neural networks that are trained to satisfy physical laws described by differential equations, making them suitable for solving various scientific and engineering problems.
 
 ### PlateWithHole_DEM.py
 
