@@ -318,9 +318,62 @@ This module utilizes Physics-Informed Neural Networks (PINNs) to interpolate the
 
 ### PlateWithHole_DEM.py
 
-This module solves the problem of a plate with a hole using the Discrete Element Method (DEM).
-
 ### [PlateWithHole.py](http://platewithhole.py/)
+
+### README for 2D Linear Elasticity Example with Deep Energy Method
+
+#### Overview
+
+This script demonstrates a 2D linear elasticity problem using the Deep Energy Method (DEM). The goal is to solve the equilibrium equation for a plate with a hole, applying both Dirichlet and Neumann boundary conditions. The plate is situated in the second quadrant and has symmetry boundary conditions on the x and y axes, with pressure boundary conditions on the hole's interior and exterior.
+
+#### Problem Description
+
+- **Domain**: A square plate with a circular hole centered at the origin.
+- **Boundary Conditions**:
+  - **Dirichlet Conditions**:
+    - \( u_x = 0 \) on the x-axis (left boundary).
+    - \( u_y = 0 \) on the y-axis (bottom boundary).
+  - **Neumann Conditions**:
+    - Pressure \( P\_{int} = 10 \text{ MPa} \) on the interior boundary of the hole.
+    - Pressure \( P\_{ext} = 0 \text{ MPa} \) on the exterior boundary of the plate.
+
+#### Features
+
+- **Elasticity Model**: Uses Lame constants (\(\mu\) and \(\lambda\)) in the constitutive law.
+- **Deep Energy Method (DEM)**: Applies neural networks to approximate the solution of the elasticity problem.
+
+#### Code Description
+
+1. **Imports and Initialization**:
+
+   - Libraries are imported, and random seeds are set for reproducibility.
+
+2. **Elast_PlateWithHole Class**:
+
+   - Inherits from `Elasticity2D_DEM_dist`.
+   - Implements Dirichlet boundary conditions.
+
+3. **Exact Solutions**:
+
+   - Functions to compute exact stresses and displacements are defined.
+
+4. **Geometry and Boundary Points**:
+
+   - `PlateWHole` class is used to generate integration points for the interior and boundary of the plate.
+   - Exact traction values on the boundaries are computed.
+
+5. **Model Definition and Training**:
+
+   - A neural network model is defined using TensorFlow's `keras` API with three hidden layers.
+   - Training is performed using both Adam optimizer and TensorFlow Probability's BFGS optimizer.
+
+6. **Testing and Evaluation**:
+   - The model is tested against exact solutions.
+   - Displacement and stress fields are plotted, along with errors and convergence plots.
+
+### Method Used
+
+The script utilizes the **Deep Energy Method (DEM)** for solving the problem. This is evident from the usage of neural networks (implemented via TensorFlow) to approximate the solution to the elasticity problem, and the loss function incorporates energy-based terms typical of DEM approaches.
 
 This module solves the problem of a plate with a hole using finite element methods.
 
