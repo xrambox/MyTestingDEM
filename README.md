@@ -318,8 +318,6 @@ This module utilizes Physics-Informed Neural Networks (PINNs) to interpolate the
 
 ### PlateWithHole_DEM.py
 
-### [PlateWithHole.py](http://platewithhole.py/)
-
 ### README for 2D Linear Elasticity Example with Deep Energy Method
 
 #### Overview
@@ -376,6 +374,84 @@ This script demonstrates a 2D linear elasticity problem using the Deep Energy Me
 The script utilizes the **Deep Energy Method (DEM)** for solving the problem. This is evident from the usage of neural networks (implemented via TensorFlow) to approximate the solution to the elasticity problem, and the loss function incorporates energy-based terms typical of DEM approaches.
 
 This module solves the problem of a plate with a hole using finite element methods.
+
+### [PlateWithHole.py](http://platewithhole.py/)
+
+Here's the updated README file with the "Usage" section removed:
+
+---
+
+# 2D Linear Elasticity with PINNs
+
+## Overview
+
+This script solves a 2D linear elasticity problem using a **Physics-Informed Neural Network (PINN)** approach. The problem is defined by the equilibrium equation of linear elasticity, strain-displacement relations, and the constitutive law. The script uses TensorFlow to train a neural network to approximate the solution and applies both ADAM and BFGS optimizers to achieve this.
+
+## Problem Description
+
+The problem involves a plate with a hole, modeled in the second quadrant. The governing equations are:
+
+1. **Equilibrium Equation**: \(-\nabla \cdot \sigma(x) = f(x)\)
+2. **Strain-Displacement Relation**: \(\epsilon = \frac{1}{2}(\nabla u + \nabla u^T)\)
+3. **Constitutive Law**: \(\sigma = 2 \mu \epsilon + \lambda (\nabla \cdot u)I\)
+
+Where:
+
+- \(\sigma\) is the stress tensor,
+- \(\epsilon\) is the strain tensor,
+- \(\mu\) and \(\lambda\) are the Lamé constants,
+- \(I\) is the identity tensor.
+
+**Boundary Conditions**:
+
+- **Dirichlet**: \(u(x) = \hat{u}\) on \(\Gamma_D\) (Symmetry conditions on x and y axes)
+- **Neumann**: \(\sigma n = \hat{t}\) on \(\Gamma_N\) (Traction conditions on the left and top edges)
+
+## Components
+
+1. **Imports**: Essential libraries include TensorFlow, NumPy, SciPy, and TensorFlow Probability.
+2. **Classes and Functions**:
+
+   - `Elast_PlateWithHole`: A subclass of `Elasticity2D_coll_dist` that defines the specific problem and boundary conditions.
+   - `cart2pol`, `exact_stresses`, `getExactTraction`, and `exact_disp`: Utility functions to handle geometric transformations, compute exact stresses, and define exact displacements.
+
+3. **Model Setup**:
+
+   - Define material properties, geometry, and boundary conditions.
+   - Prepare collocation points and boundary data.
+   - Define the neural network model using TensorFlow.
+
+4. **Training**:
+
+   - Use the ADAM optimizer for initial training.
+   - Optionally, switch to SciPy's L-BFGS-B or TensorFlow Probability's BFGS for fine-tuning.
+
+5. **Testing and Evaluation**:
+   - Compute exact displacements and stresses.
+   - Compare computed results with exact solutions.
+   - Plot results, including computed displacements, stresses, and errors.
+
+## Results
+
+The script generates:
+
+- Plots of computed displacements and stresses.
+- Error plots comparing the neural network's results with exact solutions.
+- Loss convergence plots showing the optimization process.
+
+## Conclusion
+
+This script demonstrates the use of Physics-Informed Neural Networks (PINNs) for solving a 2D linear elasticity problem. The approach ensures that the neural network's predictions are consistent with the underlying physical laws and boundary conditions.
+
+---
+
+### Method Used
+
+The provided code uses **Physics-Informed Neural Networks (PINNs)**. This is evident from:
+
+- The incorporation of governing equations (e.g., equilibrium equations and constitutive laws) into the loss function.
+- The explicit handling of boundary conditions within the network’s training process.
+- The use of TensorFlow for defining and training the neural network, along with an optimization strategy that includes both ADAM and BFGS methods.
 
 ### Poisson_DEM_adaptive.py
 
