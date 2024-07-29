@@ -22,50 +22,191 @@ This repository contains implementations of deep learning methods for solving pa
 
 Companion paper: [arXiv:1908.10407](https://arxiv.org/abs/1908.10407) or [DOI:10.1016/j.cma.2019.112790](https://doi.org/10.1016/j.cma.2019.112790).
 
-## File Structure
-
-s
-
-```
-.
-├── README.md
-├── tf2
-│   ├── Helmholtz2D_Acoustic_Duct.py
-│   ├── Interpolate.py
-│   ├── PlateWithHole_DEM.py
-│   ├── PlateWithHole.py
-│   ├── Poisson_DEM_adaptive.py
-│   ├── Poisson_DEM.py
-│   ├── Poisson_mixed.py
-│   ├── Poisson_Neumann_DEM.py
-│   ├── Poisson_Neumann.py
-│   ├── Poisson.py
-│   ├── Poisson2D_Dirichlet_Circle.py
-│   ├── Poisson2D_Dirichlet_DEM.py
-│   ├── Poisson2D_Dirichlet_SinCos.py
-│   ├── Poisson2D_Dirichlet.py
-│   ├── ThickCylinder_DEM.py
-│   ├── ThickCylinder.py
-│   ├── TimonshenkoBeam_DEM.py
-│   ├── TimonshenkoBeam.py
-│   ├── Wave1D.py
-│   └── utils
-│       ├── tfp_loss.py
-│       ├── scipy_loss.py
-│       ├── Geom_examples.py
-│       ├── Plotting.py
-│       ├── Solvers.py
-│       └── Geom.py
-
-```
-
 ## Module Descriptions
 
 ### Helmholtz2D_Acoustic_Duct.py
 
 ### Helmholtz 2D Problem for Acoustic Duct
 
-This section provides a detailed description of the script used to solve the Helmholtz 2D problem for an acoustic duct with specific boundary conditions using a neural network.
+This section provides a detailed description of the script used to solve a Helmholtz 2D problem for an acoustic duct using Physics-Informed Neural Networks (PINNs). The problem is solved for both the real and imaginary parts of the wave equation with Neumann and Robin boundary conditions.
+
+Problem Statement
+We solve the Helmholtz equation:
+
+Δ
+𝑤
+(
+𝑥
+,
+𝑦
+)
+
+- 𝑘
+  2
+  𝑤
+  (
+  𝑥
+  ,
+  𝑦
+  )
+  =
+  0
+  for
+  (
+  𝑥
+  ,
+  𝑦
+  )
+  ∈
+  Ω
+  :
+  =
+  (
+  0
+  ,
+  2
+  )
+  ×
+  (
+  0
+  ,
+  1
+  )
+  Δw(x,y)+k
+  2
+  w(x,y)=0for(x,y)∈Ω:=(0,2)×(0,1)
+
+with the following boundary conditions:
+
+Neumann boundary condition at
+𝑥
+=
+0
+x=0:
+
+∂
+𝑢
+∂
+𝑛
+=
+cos
+⁡
+(
+𝑚
+𝜋
+𝑥
+)
+∂n
+∂u
+​
+=cos(mπx)
+
+Robin boundary condition at
+𝑥
+=
+2
+x=2:
+
+∂
+𝑢
+∂
+𝑛
+=
+−
+𝑖
+𝑘
+𝑢
+∂n
+∂u
+​
+=−iku
+
+Neumann boundary conditions at
+𝑦
+=
+0
+y=0 and
+𝑦
+=
+1
+y=1:
+
+∂
+𝑢
+∂
+𝑛
+=
+0
+∂n
+∂u
+​
+=0
+
+The exact solution is given by:
+
+𝑢
+(
+𝑥
+,
+𝑦
+)
+=
+cos
+⁡
+(
+𝑚
+𝜋
+𝑦
+)
+(
+𝐴
+1
+𝑒
+−
+𝑖
+𝑘
+𝑥
+𝑥
+
+- 𝐴
+  2
+  𝑒
+  𝑖
+  𝑘
+  𝑥
+  𝑥
+  )
+  u(x,y)=cos(mπy)(A
+  1
+  ​
+  e
+  −ik
+  x
+  ​
+  x
+  +A
+  2
+  ​
+  e
+  ik
+  x
+  ​
+  x
+  )
+
+where
+𝐴
+1
+A
+1
+​
+and
+𝐴
+2
+A
+2
+​
+are constants obtained by solving a linear system.
 
 #### Overview
 

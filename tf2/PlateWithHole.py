@@ -38,6 +38,7 @@ np.random.seed(42)
 tf.random.set_seed(42)
 
 
+
 class Elast_PlateWithHole(Elasticity2D_coll_dist):
     '''
     Class including the symmetry boundary conditions for the plate with hole problem
