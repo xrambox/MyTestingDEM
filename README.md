@@ -318,7 +318,7 @@ This module utilizes Physics-Informed Neural Networks (PINNs) to interpolate the
 
 ### PlateWithHole_DEM.py
 
-### README for 2D Linear Elasticity Example with Deep Energy Method
+### 2D Linear Elasticity Example with Deep Energy Method
 
 #### Overview
 
@@ -377,11 +377,7 @@ This module solves the problem of a plate with a hole using finite element metho
 
 ### [PlateWithHole.py](http://platewithhole.py/)
 
-Here's the updated README file with the "Usage" section removed:
-
----
-
-# 2D Linear Elasticity with PINNs
+### 2D Linear Elasticity with PINNs
 
 ## Overview
 
