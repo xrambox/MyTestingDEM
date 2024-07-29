@@ -211,8 +211,6 @@ are constants obtained by solving a linear system.
 Code Description
 The code is structured as follows:
 
-Here's the exact section for your GitHub README formatted with numbering and bullets:
-
 ## Code Description
 
 The code is structured as follows:
