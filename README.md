@@ -1285,104 +1285,7 @@ To run the script:
 
 python Interpolate.py
 
-````
-
-## Detailed Description of `Helmholtz2D_Acoustic_Duct.py`
-
-### Import Statements
-
-```python
-import tensorflow as tf
-import numpy as np
-import time
-import tensorflow_probability as tfp
-import matplotlib.pyplot as plt
-from utils.tfp_loss import tfp_function_factory
-from utils.Geom_examples import Quadrilateral
-from utils.Solvers import Helmholtz2D_coll
-from utils.Plotting import plot_convergence_semilog
-
-````
-
-### Model Parameters
-
-- **m**: Mode number
-- **k**: Wave number
-- **alpha**: Coefficient for Robin boundary conditions
-
-### Exact Solution
-
-```python
-def exact_sol(x, y):
-    # Implementation of the exact solution
-
 ```
-
-### Boundary Conditions
-
-```python
-def u_bound_left(x, y):
-    # Implementation for left boundary
-
-def u_bound_right(x, y):
-    # Implementation for right boundary
-
-def u_bound_up_down(x, y):
-    # Implementation for top and bottom boundaries
-
-```
-
-### Data Generation
-
-```python
-xmin = 0
-xmax = 2
-ymin = 0
-ymax = 1
-domainCorners = np.array([[xmin,ymin], [xmin,ymax], [xmax,ymin], [xmax,ymax]])
-myQuad = Quadrilateral(domainCorners)
-# Generate points for the domain and boundary conditions
-
-```
-
-### Neural Network Model
-
-```python
-l1 = tf.keras.layers.Dense(20, "tanh")
-l2 = tf.keras.layers.Dense(20, "tanh")
-l3 = tf.keras.layers.Dense(20, "tanh")
-l4 = tf.keras.layers.Dense(2, None)
-train_op = tf.keras.optimizers.Adam()
-pred_model = Helmholtz2D_coll([l1, l2, l3, l4], train_op, num_epoch, print_epoch, k, alpha_real, alpha_imag)
-
-```
-
-### Training and Testing
-
-```python
-# Train with Adam optimizer
-pred_model.network_learn(Xint_tf, Yint_tf, XbndNeu_tf, YbndNeu_tf, XbndRobin_tf, YbndRobin_tf)
-
-# Train with BFGS optimizer
-results = tfp.optimizer.bfgs_minimize(value_and_gradients_function=loss_func, initial_position=init_params, max_iterations=3000, tolerance=1e-14)
-loss_func.assign_new_model_parameters(results.position)
-
-# Testing
-YTest = pred_model(XTest_tf).numpy()
-# Plot results
-
-```
-
-### Plotting
-
-```python
-plt.contourf(xPhysTest2D, yPhysTest2D, YExact2D_real, 255, cmap=plt.cm.jet)
-plt.colorbar()
-plt.title("Exact solution (real)")
-plt.show()
-
-```
-
 ## Contributing
 
 Contributions are welcome! Please fork the repository and submit a pull request for
@@ -1396,3 +1299,4 @@ This project is licensed under the MIT License. See the LICENSE file for details
 ## Acknowledgements
 
 Special thanks to all the contributors and the open-source community for their valuable work and resources.
+```
