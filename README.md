@@ -1246,46 +1246,9 @@ pip install tensorflow==2.11 tensorflow-probability numpy matplotlib scipy
 
 ```
 
-## Running the Code
 
-To run any of the scripts, navigate to the directory containing the script and run it using Python. For example:
 
-```
 
-cd tf2
-python Helmholtz2D_Acoustic_Duct.py
-
-```
-
-### Example: Running `Helmholtz2D_Acoustic_Duct.py`
-
-This script implements the Helmholtz 2D problem for an acoustic duct. The main steps are:
-
-1. Define the model parameters and exact solutions.
-2. Generate training data for the Neumann and Robin boundary conditions.
-3. Define the neural network model.
-4. Train the model using Adam and BFGS optimizers.
-5. Test the model and plot the results.
-
-To run the script:
-
-```
-
-python Helmholtz2D_Acoustic_Duct.py
-
-```
-
-### Example: Running `Interpolate.py`
-
-This script provides an example of interpolation. It interpolates the function given by `exact_sol(x)` at a discrete set of points.
-
-To run the script:
-
-```
-
-python Interpolate.py
-
-```
 ## Contributing
 
 Contributions are welcome! Please fork the repository and submit a pull request for
