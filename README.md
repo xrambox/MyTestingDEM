@@ -908,8 +908,6 @@ where \(\Omega\) is a quarter annulus in the first quadrant with:
    - Plots computed and exact displacements, stresses, and errors.
    - Plots loss convergence to evaluate training performance.
 
-Certainly! Here's the revised README without the "Usage," "Dependencies," "Example Output," and "Notes" sections:
-
 # ThickCylinder.py
 
 ## Overview
