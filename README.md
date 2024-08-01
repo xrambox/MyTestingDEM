@@ -1189,14 +1189,9 @@ The script uses the Physics-Informed Neural Network (PINN) approach to integrate
    - Visualizes results through contour plots of computed and exact displacements and velocities, as well as error metrics.
    - Plots loss convergence during the training process.
 
-## Installation
+Certainly! Here’s the corrected and GitHub-compatible README section:
 
-To run the script, ensure you have the required Python packages installed. You can install them using pip:
-
-```bash
-pip install tensorflow numpy scipy tensorflow-probability matplotlib
-
-
+````markdown
 ## Installation
 
 ### Prerequisites
@@ -1214,46 +1209,36 @@ Ensure you have the following software installed:
 
 1. **Clone the repository:**
 
-```
-
-git clone <https://github.com/yourusername/DeepLearningPDE.git>
-cd DeepLearningPDE
-
-```
+   ```bash
+   git clone https://github.com/yourusername/DeepLearningPDE.git
+   cd DeepLearningPDE
+   ```
+````
 
 2. **Create a virtual environment:**
 
-```
-
-python -m venv venv
-source venv/bin/activate # On Windows, use `venv\\Scripts\\activate`
-
-```
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+   ```
 
 3. **Install the dependencies:**
 
-```
+   If a `requirements.txt` file is provided, use:
 
-pip install -r requirements.txt
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-```
+   If the `requirements.txt` file is not available, you can manually install the dependencies:
 
-If the `requirements.txt` file is not provided, you can manually install the dependencies:
-
-```
-
-pip install tensorflow==2.11 tensorflow-probability numpy matplotlib scipy
-
-```
-
-
-
+   ```bash
+   pip install tensorflow==2.11 tensorflow-probability numpy matplotlib scipy
+   ```
 
 ## Contributing
 
-Contributions are welcome! Please fork the repository and submit a pull request for
-
-any enhancements or bug fixes.
+Contributions are welcome! Please fork the repository and submit a pull request for any enhancements or bug fixes.
 
 ## License
 
@@ -1262,4 +1247,3 @@ This project is licensed under the MIT License. See the LICENSE file for details
 ## Acknowledgements
 
 Special thanks to all the contributors and the open-source community for their valuable work and resources.
-```
