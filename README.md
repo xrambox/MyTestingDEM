@@ -1187,8 +1187,6 @@ The script uses the Physics-Informed Neural Network (PINN) approach to integrate
    - Visualizes results through contour plots of computed and exact displacements and velocities, as well as error metrics.
    - Plots loss convergence during the training process.
 
-
-
 ````markdown
 ## Installation
 
@@ -1245,3 +1243,5 @@ This project is licensed under the MIT License. See the LICENSE file for details
 ## Acknowledgements
 
 Special thanks to all the contributors and the open-source community for their valuable work and resources.
+
+GIT Push Everyday
