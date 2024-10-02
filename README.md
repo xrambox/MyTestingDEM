@@ -1244,9 +1244,4 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 Special thanks to all the contributors and the open-source community for their valuable work and resources.
 
-GIT Push Everyday
-GIT push TODAY. yoU ARE aWESOMEEEEEEEEEEEEEEEEEEEEEEEEEEEE
-
-Ankittttttt Is Awesomeee
-Ankitttttttt is Awesomeeeeeeeeeeeeeeeeeeeeeeee
-Ankit is greatt
+Git Push today. Date - 02/10//20204
