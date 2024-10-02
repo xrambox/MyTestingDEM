@@ -1244,4 +1244,22 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 Special thanks to all the contributors and the open-source community for their valuable work and resources.
 
+<<<<<<< HEAD
 Git Push today. Date - 02/10//20204
+=======
+GIT Push Everyday
+GIT push TODAY. yoU ARE aWESOMEEEEEEEEEEEEEEEEEEEEEEEEEEEE
+
+I am Aweeeeeesomeeeeeeeeeeeeeeeeeeeeeeee
+
+
+I am Greatttttttttttt
+I am amazingxx
+
+I am goododoododo
+#
+ jajajaja Lo Siento Mi Amor. ICH LIEBE DISH 
+
+ Ankit Singh is god
+ I am here now dont worry
+>>>>>>> 3b1614eccf490d06087fd92c462d0f4a878e3afd
