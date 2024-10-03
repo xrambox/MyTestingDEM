@@ -1244,9 +1244,9 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 Special thanks to all the contributors and the open-source community for their valuable work and resources.
 
-GIT Push Everyday
-GIT push TODAY. yoU ARE aWESOMEEEEEEEEEEEEEEEEEEEEEEEEEEEE
+Git Push today. Date - 02/10//20204
 
+<<<<<<< HEAD
 I am Aweeeeeesomeeeeeeeeeeeeeeeeeeeeeeee
 
 
@@ -1256,3 +1256,12 @@ I am amazingxx
 I am goododoododo
 #
 Lo |Siento, comprendo, permessso 
+=======
+ssdds
+Ankiit sss
+Lo seinto
+>>>>>>> 40161bede78586117edd368c7184e2a3271bb12a
+
+
+
+ankit anand
