@@ -1249,22 +1249,25 @@ Git Push today. Date - 02/10//20204
 <<<<<<< HEAD
 I am Aweeeeeesomeeeeeeeeeeeeeeeeeeeeeeee
 
-
 I am Greatttttttttttt
 I am amazingxx
 
 I am goododoododo
+
 #
-Lo |Siento, comprendo, permessso 
-=======
+
+# Lo |Siento, comprendo, permessso
+
 ssdds
 Ankiit sss
 Lo seinto
->>>>>>> 40161bede78586117edd368c7184e2a3271bb12a
 
+> > > > > > > 40161bede78586117edd368c7184e2a3271bb12a
 
 Ankit Singh
 RamboGodAkm
 ankit anand
 
 Ankit Is the king of the world.
+
+I am Ankit Singh and I am gonna rule the world. Hahahahahahaha
