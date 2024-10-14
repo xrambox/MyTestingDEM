@@ -1258,18 +1258,4 @@ I am goododoododo
 
 # Lo |Siento, comprendo, permessso
 
-ssdds
-Ankiit sss
-Lo seinto
-
-> > > > > > > 40161bede78586117edd368c7184e2a3271bb12a
-
-Ankit Singh
-RamboGodAkm
-ankit anand
-
-Ankit Is the king of the world.
-
-I am Ankit Singh and I am gonna rule the world. Hahahahahahaha
-hahahahahaha hahahahahahaha hahahaahha
-
+I Am Ankit SIngh and I love coding and machine elarning stuff. I want to work for space trechnology one day in future. I want to learnsky diving and get a liscenec for it
