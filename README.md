@@ -1258,4 +1258,8 @@ I am goododoododo
 
 # Lo |Siento, comprendo, permessso
 
-I Am Ankit SIngh and I love coding and machine elarning stuff. I want to work for space trechnology one day in future. I want to learnsky diving and get a liscenec for it
+I Am Ankit SIngh and I love coding and machine elarning stuff. I want to work for space trechnology one day in future. I want to learnsky diving and get a liscene for it.
+
+Ankit Anand is the GOD
+I am the most narcisistic person Aline.
+
