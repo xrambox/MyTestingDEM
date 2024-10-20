@@ -152,6 +152,23 @@ with concurrent.futures.ThreadPoolExecutor() as executor:
 err = YExact - YTest
 print("L2-error norm: {}".format(np.linalg.norm(err)/np.linalg.norm(YTest)))
 
-# Plot the loss convergence
-plot_convergence_semilog(pred_model.adam_loss_hist, loss_func.history)
-plt.savefig("loss_convergence.png")  # Save the plot instead of plt.show()
+# Adjusting loss convergence plot limits
+def plot_loss_convergence():
+    fig, ax = plt.subplots()
+    ax.plot(np.arange(len(pred_model.adam_loss_hist)), pred_model.adam_loss_hist, label='ADAM Loss')
+    ax.plot(np.arange(len(loss_func.history)), loss_func.history, label='LBFGS Loss')
+    
+    ax.set_xlabel("Epochs/Iterations")
+    ax.set_ylabel("Loss")
+    ax.set_yscale('log')
+
+    # Set y-axis limits to prevent non-positive values on log scale
+    ymin = max(1e-10, min(min(pred_model.adam_loss_hist), min(loss_func.history)))
+    ax.set_ylim([ymin, None])
+
+    ax.set_title("Loss convergence")
+    ax.legend()
+    return fig
+
+# Save the loss convergence plot
+save_plot("loss_convergence", plot_loss_convergence)
